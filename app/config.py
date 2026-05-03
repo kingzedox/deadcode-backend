@@ -17,6 +17,7 @@ class Settings:
     GROQ_API_KEY: str = os.getenv("GROQ_API_KEY", "")
     GROQ_MODEL: str = "llama-3.3-70b-versatile"
     GROQ_API_URL: str = "https://api.groq.com/openai/v1/chat/completions"
+    GITHUB_TOKEN: str = os.getenv("GITHUB_TOKEN", "")
 
     # GitHub REST API (unauthenticated for public repos)
     GITHUB_API_BASE: str = "https://api.github.com"
