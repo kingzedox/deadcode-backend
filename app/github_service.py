@@ -39,7 +39,10 @@ async def fetch_repo_tree(owner: str, repo: str) -> list[dict]:
     Falls back to the Contents API if the tree is too large.
     """
     url = f"{settings.GITHUB_API_BASE}/repos/{owner}/{repo}/git/trees/HEAD?recursive=1"
-    headers = {"Accept": "application/vnd.github+json"}
+    headers = {
+    "Accept": "application/vnd.github+json",
+    "Authorization": f"Bearer {settings.GITHUB_TOKEN}"
+    }
 
     async with httpx.AsyncClient(timeout=30) as client:
         resp = await client.get(url, headers=headers)
@@ -85,7 +88,10 @@ async def fetch_file_contents(
     logger.info("Fetching %d / %d files from %s/%s", len(candidates), len(tree), owner, repo)
 
     files: list[RepoFile] = []
-    headers = {"Accept": "application/vnd.github+json"}
+    headers = {
+    "Accept": "application/vnd.github+json",
+    "Authorization": f"Bearer {settings.GITHUB_TOKEN}"
+    }
 
     async with httpx.AsyncClient(timeout=30) as client:
         for item in candidates:
