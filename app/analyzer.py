@@ -45,8 +45,8 @@ def _build_analysis_prompt(files: list[RepoFile], scan_type: str) -> str:
     # Build a compact representation of the codebase
     code_sections: list[str] = []
     for f in files:
-        # Truncate very long files to first 200 lines for prompt economy
-        lines = f.content.splitlines()[:200]
+        # Truncate very long files to first 50 lines for prompt economy
+        lines = f.content.splitlines()[:50]
         code_sections.append(f"### FILE: {f.path}\n```\n" + "\n".join(lines) + "\n```")
 
     code_block = "\n\n".join(code_sections)
