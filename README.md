@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🧟 DeadCode
 
 > **Boring AI Hackathon by Codemod.com**
@@ -99,3 +100,6 @@ deadcode/
 ## 📜 License
 
 MIT — Ship fast, hack hard. 🏴‍☠️
+=======
+# deadcode
+>>>>>>> 8cf2735841507ed8c31803b5f5ca536f56752204
