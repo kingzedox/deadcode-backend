@@ -2,6 +2,13 @@
 
 > **Boring AI Hackathon by Codemod.com**
 > Scan public GitHub repos for dead code, deprecated APIs, and security risks — then generate a ready-to-run JSSG codemod to fix them.
+> ## Live Demo: 
+
+https://deadcodescan.vercel.app
+
+> ## Frontend:
+
+https://github.com/kingzedox/deadcode-frontend
 ---
 
 ## Quick Start
