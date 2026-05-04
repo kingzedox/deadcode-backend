@@ -1,12 +1,10 @@
-<<<<<<< HEAD
 # 🧟 DeadCode
 
 > **Boring AI Hackathon by Codemod.com**
 > Scan public GitHub repos for dead code, deprecated APIs, and security risks — then generate a ready-to-run JSSG codemod to fix them.
-
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ```bash
 # 1. Install dependencies
